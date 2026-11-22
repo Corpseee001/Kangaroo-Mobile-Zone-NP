@@ -1,0 +1,1 @@
+Put product photos here. Save the shop logo as logo.png next to index.html.

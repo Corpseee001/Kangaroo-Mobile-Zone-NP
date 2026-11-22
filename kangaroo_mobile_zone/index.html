@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kangaroo Mobile Zone | Phones, repairs and accessories in Kathmandu</title>
+<meta name="description" content="New and refurbished phones, accessories and phone repair in Kathmandu. Order on WhatsApp or call the shop.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- TOP BLACK BAR -->
+<div class="top"><div class="wrap"><span id="welcome"></span>
+  <nav><a id="fb" href="#" target="_blank" rel="noopener">Facebook</a><a id="ig" href="#" target="_blank" rel="noopener">Instagram</a><button id="lang" type="button" aria-label="Change language">नेपाली</button></nav></div></div>
+
+<!-- HEADER -->
+<header class="head"><div class="wrap">
+  <a class="logo" href="#top"><img src="logo.png" alt="" onload="document.getElementById('shopName').hidden=true" onerror="this.remove()"><span id="shopName"></span></a>
+  <form class="search" id="sf" role="search">
+    <select id="cs" aria-label="Category"></select>
+    <input id="q" type="search" aria-label="Search">
+    <button class="go" type="submit" data-i18n="go"></button>
+  </form>
+  <div class="callus"><span data-i18n="callUs"></span><a id="callTop" href="#"></a></div>
+</div></header>
+
+<!-- RED MENU BAR -->
+<div class="menu"><div class="wrap" id="menu">
+  <a class="all" href="#products" data-c="all" data-i18n="allCats"></a>
+  <a href="#top" aria-current="true" data-i18n="n_home"></a>
+  <a href="#products" data-c="new" data-i18n="c_new"></a>
+  <a href="#products" data-c="refurb" data-i18n="c_refurb"></a>
+  <a href="#products" data-c="acc" data-i18n="c_acc"></a>
+  <a href="#repair" data-i18n="n_rep"></a>
+  <a href="#visit" data-i18n="n_visit"></a>
+</div></div>
+
+<main id="top">
+<!-- HERO BANNER -->
+<section class="hero"><div class="wrap">
+  <div><h1 id="hh"></h1><p id="hp"></p><a class="btn" id="hb" href="#products"></a></div>
+  <div class="art" aria-hidden="true"><div class="ph"></div><div class="glow"></div></div>
+  <div class="dots" id="dots"></div>
+</div></section>
+
+<!-- PRODUCTS -->
+<section class="wrap sec" id="products">
+  <h2 data-i18n="featH"></h2>
+  <p class="count" id="count" aria-live="polite"></p>
+  <div class="grid" id="grid"></div>
+</section>
+
+<!-- REPAIR SECTION -->
+<section class="band" id="repair"><div class="wrap">
+  <h2 data-i18n="repairH"></h2>
+  <p class="lead" data-i18n="repairP"></p>
+  <div class="svc" id="svc"></div>
+</div></section>
+
+<!-- DELIVERY, VISIT AND CONTACT -->
+<section class="wrap facts" id="visit">
+  <div><h2 data-i18n="delH"></h2><ul><li data-i18n="d1"></li><li data-i18n="d2"></li><li data-i18n="d3"></li></ul></div>
+  <div><h2 data-i18n="visitH"></h2><h3 data-i18n="addrL"></h3><p class="place" id="place"></p><p id="addr"></p><h3 data-i18n="hoursL"></h3><p id="hours"></p></div>
+  <div><h2 data-i18n="phoneH"></h2><p id="phoneText"></p><p><a id="viber" href="#">Viber</a></p></div>
+</section>
+
+<!-- MAP: set the location in js/config.js (mapEmbed) -->
+<section class="wrap mapbox"><iframe id="mapFrame" title="Shop location map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></section>
+</main>
+
+<!-- FOOTER -->
+<footer><div class="wrap" data-i18n="foot"></div></footer>
+<!-- PHONE BOTTOM BAR -->
+<div class="sticky"><a class="btn" id="waBar" href="#" target="_blank" rel="noopener" data-i18n="waBar"></a><a class="btn dark" id="callBar" href="#" data-i18n="callNow"></a></div>
+
+<script src="js/config.js"></script>
+<script src="js/translations.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

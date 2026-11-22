@@ -1,0 +1,27 @@
+/* TRANSLATIONS: all visible text in English (en) and Nepali (ne). Keep both sides in step. */
+const T = {
+ en:{welcome:"Welcome to ",go:"Search",callUs:"Call us:",callNow:"Call now",waBar:"WhatsApp us",allCats:"All Categories",n_home:"Home",n_rep:"Repairs",n_visit:"Visit us",
+  c_all:"All categories",c_new:"New phones",c_refurb:"Refurbished phones",c_acc:"Accessories",search:"Search here...",
+  s1h:"Refurbished phones",s1p:"Checked phones with battery health and warranty. Pay cash when you receive it.",s1b:"Shop refurbished",
+  s2h:"Fast phone repair",s2p:"Cracked screen or weak battery? Send a photo on WhatsApp and get the price first.",s2b:"Ask repair price",
+  s3h:"Chargers and accessories",s3p:"Fast chargers, cables, cases and earbuds for every phone.",s3b:"Shop accessories",
+  featH:"Featured products",one:" product",many:" products",order:"Order on WhatsApp",back:"Ask when it is back",
+  empty:"No match. Try another name, or message us and we will check if we can get it.",
+  repairH:"Fast repairs while you wait",repairP:"Phone not working? Send a photo and the problem on WhatsApp and we will tell you the price before we repair anything.",
+  s_screen:"Cracked screen",s_battery:"Battery change",s_port:"Charging port",s_water:"Water damage",s_software:"Software problem",s_speaker:"Speaker or mic",askPrice:"Ask price",
+  delH:"Delivery and payment",d1:"Home delivery inside Kathmandu Valley",d2:"Courier outside the Valley",d3:"Pay cash when you receive it, or pick up from the shop",
+  visitH:"Visit the shop",addrL:"Address",hoursL:"Opening hours",phoneH:"Phone and WhatsApp",
+  foot:"Prices are in Nepali rupees and can change. Message us to confirm stock before you visit."},
+ ne:{welcome:"स्वागत छ, ",go:"खोज्नुहोस्",callUs:"फोन गर्नुहोस्:",callNow:"अहिले फोन गर्नुहोस्",waBar:"WhatsApp गर्नुहोस्",allCats:"सबै श्रेणी",n_home:"गृहपृष्ठ",n_rep:"मर्मत",n_visit:"पसलमा आउनुहोस्",
+  c_all:"सबै श्रेणी",c_new:"नयाँ फोन",c_refurb:"रिफर्बिस्ड फोन",c_acc:"एक्सेसरिज",search:"यहाँ खोज्नुहोस्...",
+  s1h:"रिफर्बिस्ड फोन",s1p:"ब्याट्री अवस्था र वारेन्टीसहित जाँचिएका फोन। सामान हातमा आएपछि नगद तिर्नुहोस्।",s1b:"रिफर्बिस्ड हेर्नुहोस्",
+  s2h:"छिटो फोन मर्मत",s2p:"स्क्रिन फुट्यो वा ब्याट्री कमजोर छ? WhatsApp मा फोटो पठाउनुहोस्, पहिले नै मूल्य थाहा पाउनुहोस्।",s2b:"मर्मतको मूल्य सोध्नुहोस्",
+  s3h:"चार्जर र एक्सेसरिज",s3p:"हरेक फोनका लागि फास्ट चार्जर, केबल, केस र इयरबड।",s3b:"एक्सेसरिज हेर्नुहोस्",
+  featH:"विशेष सामान",one:" वटा सामान",many:" वटा सामान",order:"WhatsApp मा अर्डर गर्नुहोस्",back:"कहिले आउँछ सोध्नुहोस्",
+  empty:"केही भेटिएन। अर्को नाम खोज्नुहोस्, वा हामीलाई सन्देश पठाउनुहोस्, हामी मगाउन सकिन्छ कि हेर्छौं।",
+  repairH:"कुर्दाकुर्दै छिटो मर्मत",repairP:"फोन बिग्रियो? फोटो र समस्या WhatsApp मा पठाउनुहोस्। मर्मत गर्नुअघि नै हामी मूल्य भन्छौं।",
+  s_screen:"स्क्रिन फुटेको",s_battery:"ब्याट्री बदल्ने",s_port:"चार्जिङ पोर्ट",s_water:"पानी परेको",s_software:"सफ्टवेयर समस्या",s_speaker:"स्पिकर वा माइक",askPrice:"मूल्य सोध्नुहोस्",
+  delH:"डेलिभरी र भुक्तानी",d1:"काठमाडौं उपत्यकाभित्र घरसम्म डेलिभरी",d2:"उपत्यका बाहिर कुरियर",d3:"सामान हातमा आएपछि नगद तिर्नुहोस्, वा पसलमै आएर लैजानुहोस्",
+  visitH:"पसलमा आउनुहोस्",addrL:"ठेगाना",hoursL:"खुल्ने समय",phoneH:"फोन र WhatsApp",
+  foot:"मूल्य नेपाली रुपैयाँमा हो र परिवर्तन हुन सक्छ। आउनुअघि सामान छ कि छैन सन्देश पठाएर पक्का गर्नुहोस्।"}
+};
