@@ -13,8 +13,10 @@ const SHOP = {
   mapEmbed: "https://www.google.com/maps?q=26.6429499,87.9908917&z=17&output=embed"
 };
 // PART 2: products. Add, remove or change items here.
-/* cat: "new", "refurb" or "acc". Add image:"photos/a15.jpg" for a real photo. */
+/* cat: "new", "refurb" or "acc". Photos: images:["photos/a.jpg","photos/b.jpg"] (first is the main photo). */
 const PRODUCTS = [
+  {name:"Apple iPhone 17 Pro Max (Cosmic Orange)", brand:"Apple", cat:"new", price:249999, specs:"Cosmic Orange. Add storage and specs here.", stock:true, images:["C:\\Users\\Chris\\Downloads\\kangaroo_mobile_zone\\kangaroo_mobile_zone\\photos\\Apple iPhone 17 Pro Max (Cosmic Orange).jpg","C:\\Users\\Chris\\Downloads\\kangaroo_mobile_zone\\kangaroo_mobile_zone\\photos\\Apple_iPhone_17_Pro_Max__Cosmic_Orange_.jpg","C:\\Users\\Chris\\Downloads\\kangaroo_mobile_zone\\kangaroo_mobile_zone\\photos\\84c2d157-f3d4-4d7f-9e42-230879a308a0.jpg"]},
+  {name:"Youngkit Cyberpunk 360 case", brand:"Youngkit", cat:"acc", price:3499, specs:"Orange, magnetic 360 rotating ring stand", stock:true, images:["C:\\Users\\Chris\\Downloads\\kangaroo_mobile_zone\\kangaroo_mobile_zone\\photos\\Youngkit_Cyberpunk_360.jpg","C:\\Users\\Chris\\Downloads\\kangaroo_mobile_zone\\kangaroo_mobile_zone\\photos\\16ba69b3-debf-4207-b329-bfa6ce96556d.jpg"]},
   {name:"Samsung Galaxy A15", brand:"Samsung", cat:"new", price:27999, specs:"6 GB RAM, 128 GB, 5000 mAh", stock:true},
   {name:"Xiaomi Redmi Note 13", brand:"Xiaomi", cat:"new", price:31999, specs:"8 GB RAM, 128 GB, 108 MP camera", stock:true},
   {name:"Realme C55", brand:"Realme", cat:"new", price:22499, specs:"6 GB RAM, 128 GB, 33W charging", stock:false},
@@ -26,4 +28,9 @@ const PRODUCTS = [
 ];
 // PART 3: repair services. Each key needs a matching s_ line in translations.js.
 const SERVICES = ["screen","battery","port","water","software","speaker"];
+// PART 4: payment QR codes. Leave qr:"" and number:"" empty to hide an entry.
+const PAYMENT = {
+  fonepay: {label:"Fonepay QR", qr:"photos/payment/fonepay_qr.png", name:"Kangaroo Mobile Zone"},
+  esewa: {label:"eSewa", qr:"", number:"", name:""}
+};
 /* ===== END OF EDIT BLOCK ===== */

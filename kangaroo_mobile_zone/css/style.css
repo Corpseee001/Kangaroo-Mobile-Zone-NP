@@ -56,7 +56,7 @@ h2{font-size:1.7rem;font-weight:900;margin:0 0 8px}
 /* PRODUCT CARDS */
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:16px;padding-bottom:30px}
 .card{background:#fff;border:1px solid var(--line);display:flex;flex-direction:column}
-.pic{aspect-ratio:1/1;display:grid;place-items:center;background:#fafafa}
+.pic{position:relative;aspect-ratio:1/1;display:grid;place-items:center;background:#fafafa}
 .pic img{width:100%;height:100%;object-fit:contain}
 .mini{width:58px;height:104px;border-radius:11px;border:4px solid #222;display:grid;place-items:center;font-weight:900;font-size:1.3rem;background:#fff;color:var(--red)}
 .body{padding:14px;display:flex;flex-direction:column;gap:3px;flex:1}
@@ -67,6 +67,12 @@ h2{font-size:1.7rem;font-weight:900;margin:0 0 8px}
 .out{opacity:.6}
 .card .btn{margin-top:auto;width:100%}
 .empty{grid-column:1/-1;padding:28px;border:2px dashed #ccc;color:var(--muted)}
+.nv{position:absolute;top:50%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;border:0;background:rgba(0,0,0,.65);color:#fff;font-size:1.5rem;line-height:1;cursor:pointer}
+.nv:hover{background:var(--red)}
+.nv.prev{left:8px}
+.nv.next{right:8px}
+.cnt{position:absolute;bottom:8px;right:8px;background:rgba(0,0,0,.65);color:#fff;font-size:.75rem;padding:2px 8px;border-radius:999px}
+.miss{display:block;padding:12px;font-size:.8rem;color:var(--red);word-break:break-all;text-align:center}
 /* REPAIR SECTION */
 .band{background:#fff;padding:40px 0;margin-top:20px}
 .lead{color:var(--muted);max-width:58ch;margin:0 0 20px}
@@ -74,6 +80,14 @@ h2{font-size:1.7rem;font-weight:900;margin:0 0 8px}
 .svc div{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 14px;border:1px solid var(--line);background:var(--page)}
 .svc span{font-weight:700}
 .svc .btn{min-height:38px;padding:0 14px;font-size:.85rem}
+/* PAYMENT QR */
+#pay{margin-top:0;border-top:1px solid var(--line)}
+.qrs{display:flex;flex-wrap:wrap;gap:20px;margin:0 0 20px}
+.qr{margin:0;background:#fff;border:1px solid var(--line);padding:12px;text-align:center;max-width:260px}
+.qr img{width:100%;height:auto;display:block}
+.qr figcaption{margin-top:8px;font-size:.9rem}
+.steps{max-width:60ch;margin:0 0 20px;padding-left:20px}
+.steps li{margin-bottom:6px}
 /* DELIVERY AND VISIT SECTION */
 .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;padding:40px 0}
 .facts h2{font-size:1.2rem}

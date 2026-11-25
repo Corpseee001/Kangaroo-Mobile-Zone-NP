@@ -39,7 +39,7 @@ function applyLang(){
   $("place").textContent = SHOP.place[lang]; $("addr").textContent = SHOP.address[lang]; $("hours").textContent = SHOP.hours[lang];
   $("cs").innerHTML = CATS.map(c => `<option value="${c}">${esc(t("c_" + c))}</option>`).join(""); $("cs").value = cat;
   $("svc").innerHTML = SERVICES.map(k => `<div><span>${esc(t("s_" + k))}</span><a class="btn" target="_blank" rel="noopener" href="${waLink("Hello " + SHOP.name + ", my phone has this problem: " + T.en["s_" + k] + ". Please tell me the repair price.")}">${esc(t("askPrice"))}</a></div>`).join("");
-  showSlide(); render();
+  showSlide(); render(); renderPay();
 }
 function render(){
   const q = $("q").value.trim().toLowerCase();
@@ -48,11 +48,33 @@ function render(){
   if (!list.length){ $("grid").innerHTML = `<div class="empty">${esc(t("empty"))}</div>`; return; }
   $("grid").innerHTML = list.map(p => {
     const msg = `Hello ${SHOP.name}, I am interested in the ${p.name} (${rs(p.price)}). Is it available?`;
-    const pic = p.image ? `<img src="${esc(p.image)}" alt="${esc(p.name)}" loading="lazy">` : `<div class="mini" aria-hidden="true">${esc(p.brand[0])}</div>`;
+    const imgs = imgsOf(p), pi = PRODUCTS.indexOf(p);
+    const nav = imgs.length > 1 ? `<button type="button" class="nv prev" data-i="${pi}" data-d="-1" aria-label="Previous photo">&#8249;</button><button type="button" class="nv next" data-i="${pi}" data-d="1" aria-label="Next photo">&#8250;</button><span class="cnt">1 / ${imgs.length}</span>` : "";
+    const pic = imgs.length ? `<img class="main" src="${esc(imgs[0])}" alt="${esc(p.name)}" loading="lazy" onload="imgOk(this)" onerror="imgMissing(this)">${nav}` : `<div class="mini" aria-hidden="true">${esc(p.brand[0])}</div>`;
     const btn = p.stock
       ? `<a class="btn" target="_blank" rel="noopener" href="${waLink(msg)}">${esc(t("order"))}</a>`
       : `<a class="btn line" target="_blank" rel="noopener" href="${waLink("Hello, please tell me when the " + p.name + " is back in stock.")}">${esc(t("back"))}</a>`;
     return `<article class="card ${p.stock ? "" : "out"}"><div class="pic">${pic}</div><div class="body"><span class="kind">${esc(p.brand)} · ${esc(t("c_" + p.cat))}</span><h3>${esc(p.name)}</h3><p class="specs">${esc(p.specs)}</p><span class="price">${rs(p.price)}</span>${btn}</div></article>`;
   }).join("");
+}
+function imgsOf(p){ return p.images || (p.image ? [p.image] : []); }
+function imgOk(el){ el.style.display = ""; const m = el.parentNode.querySelector(".miss"); if (m) m.remove(); }
+function imgMissing(el){
+  el.style.display = "none";
+  let m = el.parentNode.querySelector(".miss");
+  if (!m){ m = document.createElement("small"); m.className = "miss"; el.parentNode.appendChild(m); }
+  m.textContent = "Image not found: " + el.getAttribute("src");
+}
+$("grid").addEventListener("click", e => {
+  const b = e.target.closest(".nv"); if (!b) return;
+  const imgs = imgsOf(PRODUCTS[+b.dataset.i]), pic = b.closest(".pic"), img = pic.querySelector(".main");
+  const n = imgs.length, next = ((+pic.dataset.pos || 0) + (+b.dataset.d) + n) % n;
+  pic.dataset.pos = next; img.src = imgs[next];
+  pic.querySelector(".cnt").textContent = (next + 1) + " / " + n;
+});
+function renderPay(){
+  $("qrs").innerHTML = Object.values(PAYMENT).filter(m => m.qr || m.number).map(m =>
+    `<figure class="qr">${m.qr ? `<img src="${esc(m.qr)}" alt="${esc(m.label)}" onload="imgOk(this)" onerror="imgMissing(this)">` : ""}<figcaption><strong>${esc(m.label)}</strong>${m.number ? `<br>${esc(m.number)}` : ""}${m.name ? `<br>${esc(m.name)}` : ""}</figcaption></figure>`).join("");
+  $("payWa").href = waLink("Hello " + SHOP.name + ", " + t("payMsg"));
 }
 applyLang();

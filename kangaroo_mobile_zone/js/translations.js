@@ -11,7 +11,11 @@ const T = {
   s_screen:"Cracked screen",s_battery:"Battery change",s_port:"Charging port",s_water:"Water damage",s_software:"Software problem",s_speaker:"Speaker or mic",askPrice:"Ask price",
   delH:"Delivery and payment",d1:"Home delivery inside Kathmandu Valley",d2:"Courier outside the Valley",d3:"Pay cash when you receive it, or pick up from the shop",
   visitH:"Visit the shop",addrL:"Address",hoursL:"Opening hours",phoneH:"Phone and WhatsApp",
-  foot:"Prices are in Nepali rupees and can change. Message us to confirm stock before you visit."},
+  foot:"Prices are in Nepali rupees and can change. Message us to confirm stock before you visit.",
+  n_pay:"Payment",payH:"Pay by QR",payP:"Scan the QR below to pay for your order.",
+  pay1:"Scan the QR with a mobile banking or wallet app that supports Fonepay QR.",pay2:"Pay the exact total of your order.",
+  pay3:"Send the payment screenshot and transaction ID on WhatsApp. We prepare your order after we confirm the payment.",
+  payBtn:"Send payment proof on WhatsApp",payMsg:"I have paid for my order. Amount: Rs ___. Transaction ID: ___. Items: ___."},
  ne:{welcome:"स्वागत छ, ",go:"खोज्नुहोस्",callUs:"फोन गर्नुहोस्:",callNow:"अहिले फोन गर्नुहोस्",waBar:"WhatsApp गर्नुहोस्",allCats:"सबै श्रेणी",n_home:"गृहपृष्ठ",n_rep:"मर्मत",n_visit:"पसलमा आउनुहोस्",
   c_all:"सबै श्रेणी",c_new:"नयाँ फोन",c_refurb:"रिफर्बिस्ड फोन",c_acc:"एक्सेसरिज",search:"यहाँ खोज्नुहोस्...",
   s1h:"रिफर्बिस्ड फोन",s1p:"ब्याट्री अवस्था र वारेन्टीसहित जाँचिएका फोन। सामान हातमा आएपछि नगद तिर्नुहोस्।",s1b:"रिफर्बिस्ड हेर्नुहोस्",
@@ -23,5 +27,9 @@ const T = {
   s_screen:"स्क्रिन फुटेको",s_battery:"ब्याट्री बदल्ने",s_port:"चार्जिङ पोर्ट",s_water:"पानी परेको",s_software:"सफ्टवेयर समस्या",s_speaker:"स्पिकर वा माइक",askPrice:"मूल्य सोध्नुहोस्",
   delH:"डेलिभरी र भुक्तानी",d1:"काठमाडौं उपत्यकाभित्र घरसम्म डेलिभरी",d2:"उपत्यका बाहिर कुरियर",d3:"सामान हातमा आएपछि नगद तिर्नुहोस्, वा पसलमै आएर लैजानुहोस्",
   visitH:"पसलमा आउनुहोस्",addrL:"ठेगाना",hoursL:"खुल्ने समय",phoneH:"फोन र WhatsApp",
-  foot:"मूल्य नेपाली रुपैयाँमा हो र परिवर्तन हुन सक्छ। आउनुअघि सामान छ कि छैन सन्देश पठाएर पक्का गर्नुहोस्।"}
+  foot:"मूल्य नेपाली रुपैयाँमा हो र परिवर्तन हुन सक्छ। आउनुअघि सामान छ कि छैन सन्देश पठाएर पक्का गर्नुहोस्।",
+  n_pay:"भुक्तानी",payH:"QR बाट भुक्तानी",payP:"आफ्नो अर्डरको रकम तिर्न तलको QR स्क्यान गर्नुहोस्।",
+  pay1:"Fonepay QR चल्ने मोबाइल बैंकिङ वा वालेट एपले QR स्क्यान गर्नुहोस्।",pay2:"अर्डरको ठ्याक्कै कुल रकम तिर्नुहोस्।",
+  pay3:"भुक्तानीको स्क्रिनसट र ट्रान्जेक्सन आईडी WhatsApp मा पठाउनुहोस्। भुक्तानी पुष्टि भएपछि हामी अर्डर तयार गर्छौं।",
+  payBtn:"WhatsApp मा भुक्तानी प्रमाण पठाउनुहोस्",payMsg:"मैले अर्डरको भुक्तानी गरेको छु। रकम: Rs ___। ट्रान्जेक्सन आईडी: ___। सामान: ___।"}
 };
